@@ -10,7 +10,7 @@ tags: [malware, infostealer, pentagon, clickfix, crypto, github, threat-intel]
 
 > 🔴 **Still live (as of 2026-11-26).** The repository was created on 2026-01-03 and has been up for almost 11 months, with 34 stars and 9 forks. All 9 forks also host `Ledger Live.exe` (listed under [Delivery](#delivery)), so the file will keep circulating even if the original is taken down.
 
-> ⚠️ **Never download Ledger Live, or anything that claims to "fake" a Ledger balance, from GitHub, ads, or links in DMs.** The only legitimate source of Ledger Live is **ledger.com**. If you ran a file like this, go straight to [What to do if you ran it](#what-to-do-if-you-ran-it).
+> ⚠️ **Never download Ledger Live, or anything that claims to "fake" a Ledger balance, from GitHub, ads, or links in DMs.** The only legitimate source of Ledger Live is **ledger.com**.
 
 ---
 
@@ -208,38 +208,3 @@ level: medium
 ```
 
 **Network:** block and alert on `marsalek[.]cy` and `185.178.208[.]168`. Hunt for `python-requests` user agents in outbound HTTPS from workstations.
-
----
-
-## MITRE ATT&CK mapping
-
-| Tactic | Technique |
-|---|---|
-| Initial Access | T1189 Drive-by Compromise / T1608.001 Upload Malware (GitHub) |
-| Execution | T1204.002 User Execution: Malicious File |
-| Execution | T1059.005 Visual Basic · T1059.006 Python |
-| Defense Evasion | T1036.005 Masquerading: Match Legitimate Name or Location (“Ledger Live”, `\Google\python\`) |
-| Defense Evasion | T1027.002 Software Packing · T1620-style in-memory `exec()` of downloaded code |
-| Command and Control | T1105 Ingress Tool Transfer · T1071.001 Web Protocols |
-| Credential Access | T1555.003 Credentials from Web Browsers · T1539 Steal Web Session Cookie |
-| Impact / Collection | T1489 Service Stop (browser termination) · T1115 Clipboard Data |
-| Exfiltration | T1041 Exfiltration Over C2 Channel |
-
----
-
-## What to do if you ran it
-
-1. **Disconnect the machine** from the network.
-2. **From a different, clean device:**
-   - Move any crypto from hot wallets, browser-extension wallets and exchange accounts to new addresses. A hardware wallet's seed is safe **only if you never typed it into the computer**. If you did, treat it as compromised and move funds to a new seed.
-   - Change passwords for email, exchanges, banking and password managers. Start with email.
-   - Sign out of all sessions (Google, Microsoft, Discord, Telegram, exchanges) to invalidate stolen cookies, and re-enroll 2FA.
-3. **Reinstall Windows** on the infected machine. Deleting the files is not enough, because you can't know what else was dropped.
-4. Before sending crypto, always check the pasted address against the original.
-
-## How to stay safe
-
-- Download wallet software **only from the vendor's official site** (`ledger.com`). Ledger does not distribute Ledger Live through GitHub repositories with `.exe` files committed to them.
-- Treat any **unsigned** executable (“Unknown Publisher”) that claims to be a well-known app as hostile.
-- Never paste commands into **Win + R**, PowerShell or Terminal because a web page or “CAPTCHA” told you to.
-- Organizations: alert on user-profile Python interpreters and `wscript.exe` → `python.exe` chains.
