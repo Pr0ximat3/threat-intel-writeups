@@ -6,9 +6,11 @@ tags: [malware, infostealer, pentagon, clickfix, crypto, github, threat-intel]
 
 # Fake “Ledger Live” on GitHub Drops the Pentagon Python Stealer
 
-**TL;DR:** A GitHub repository called `ledger-larp-wallet` hosts a file named `Ledger Live.exe` that pretends to be the official Ledger crypto wallet app. Running it quietly installs a private copy of Python, downloads a second-stage script from `marsalek[.]cy`, and runs the **Pentagon** information stealer. Pentagon kills your browsers, steals saved credentials and session data, and watches the clipboard. The same server also hosts a control panel that builds **ClickFix** (fake CAPTCHA) and PowerShell lures, so expect this operation to show up through other channels too.
+**TL;DR:** A GitHub repository called `ledger-larp-wallet` hosts a file named `Ledger Live.exe`, advertised as a "Ledger Live LARP wallet" that shows a fake crypto balance and fake transactions. Its README dresses it up as a harmless "Virtual Portfolio Manager" for practising with demo funds. Running it quietly installs a private copy of Python, downloads a second-stage script from `marsalek[.]cy`, and runs the **Pentagon** information stealer. Pentagon kills your browsers, steals saved credentials and session data, and watches the clipboard. The same server also hosts a control panel that builds **ClickFix** (fake CAPTCHA) and PowerShell lures, so expect this operation to show up through other channels too.
 
-> ⚠️ **Never download Ledger Live from GitHub, ads, or links in DMs.** The only legitimate source is **ledger.com**. If you ran a file like this, go straight to [What to do if you ran it](#what-to-do-if-you-ran-it).
+> 🔴 **Still live (as of 2026-11-26).** The repository was created on 2026-01-03 and has been up for almost 11 months, with 34 stars and 10 forks. Nine of those forks also host `Ledger Live.exe` (listed under [Delivery](#delivery)), so the file will keep circulating even if the original is taken down.
+
+> ⚠️ **Never download Ledger Live, or anything that claims to "fake" a Ledger balance, from GitHub, ads, or links in DMs.** The only legitimate source of Ledger Live is **ledger.com**. If you ran a file like this, go straight to [What to do if you ran it](#what-to-do-if-you-ran-it).
 
 ---
 
@@ -16,7 +18,8 @@ tags: [malware, infostealer, pentagon, clickfix, crypto, github, threat-intel]
 
 | | |
 |---|---|
-| **Lure** | `Ledger Live.exe`, hosted at `github[.]com/immemtary/ledger-larp-wallet` |
+| **Lure** | `Ledger Live.exe`, a "Ledger Live LARP wallet" (fake balance tool) hosted at `github[.]com/immemtary/ledger-larp-wallet` |
+| **Status** | Still live as of 2026-11-26 (created 2026-01-03; 34 stars, 10 forks, 9 of which also host the EXE) |
 | **Malware family** | Pentagon (Python-based infostealer) |
 | **Loader** | Packed Windows EXE → VBScript → bundled Python + pip |
 | **C2** | `marsalek[.]cy` (185.178.208[.]168, DDoS-Guard) |
@@ -28,7 +31,7 @@ tags: [malware, infostealer, pentagon, clickfix, crypto, github, threat-intel]
 ## Infection chain
 
 ```
-github.com/immemtary/ledger-larp-wallet
+github[.]com/immemtary/ledger-larp-wallet
         │  user downloads "Ledger Live.exe" (≈2 MB, packed, unsigned)
         ▼
 Ledger Live.exe
@@ -50,8 +53,10 @@ wscript.exe %TEMP%\r.vbs  →  python %TEMP%\svc.py      ← Pentagon stealer
         └─ POST https://marsalek.cy/create_log | /log_data | /logging/errors
 ```
 
-### 1. Delivery: a fake wallet on GitHub
-The repository poses as Ledger Live, the desktop app for Ledger hardware wallets. Alongside `Ledger Live.exe` it contains decoy files (`LedgersLive.dll`, `Ledgers.pdb`, language folders) to look like a real build. The executable is **unsigned**: Windows shows an *“Unknown Publisher”* warning, and the user has to click **Run**. Network detections fired for *“EXE downloaded from GitHub”* and *“Packed Executable Download”*.
+### 1. Delivery: a "LARP wallet" on GitHub
+The repository borrows the name of Ledger Live, the desktop app for Ledger hardware wallets, but sells something different. Its description is stuffed with the phrase *"ledger live larp wallet … fake ledger balance, transactions"*, repeated over and over to rank in search. It targets people looking for a tool that shows a fake crypto balance, whether to show off or to back up a scam. The README calls it a "Virtual Portfolio Manager", a "risk-free demo environment" in which you "configure your virtual crypto amounts". That lowers the guard of anyone who stops to wonder whether it's safe.
+
+Alongside `Ledger Live.exe` the repository contains decoy files (`LedgersLive.dll`, `Ledgers.pdb`, language folders) to look like a real build. It was created on 2026-01-03 and is **still online as of 2026-11-26**, with 34 stars and 10 forks. Nine of those forks also carry `Ledger Live.exe`, and most were created within days of the original, which suggests the stars and forks may have been planted to make the project look popular. The executable is **unsigned**: Windows shows an *“Unknown Publisher”* warning, and the user has to click **Run**. Network detections fired for *“EXE downloaded from GitHub”* and *“Packed Executable Download”*.
 
 Attackers like GitHub because it is trusted, rarely blocked, and repositories can be recreated in minutes.
 
@@ -131,6 +136,19 @@ hxxps://i.postimg[.]cc/k4zrz92z/111.png        (loaded by the panel; low confide
 ```
 hxxps://github[.]com/immemtary/ledger-larp-wallet
 hxxps://github[.]com/immemtary/ledger-larp-wallet/blob/main/Ledger%20Live.exe
+```
+
+Forks that also host `Ledger Live.exe` (checked 2026-11-26):
+```
+hxxps://github[.]com/aysehattay31-coder/ledger-larp-wallet
+hxxps://github[.]com/lolaancarass-alt/ledger-larp-wallet
+hxxps://github[.]com/commend25/ledger-larp-wallet
+hxxps://github[.]com/BambyKo/ledger-larp-wallet
+hxxps://github[.]com/metalmyst/ledger-larp-wallet
+hxxps://github[.]com/mahicheat00/ledger-larp-wallet
+hxxps://github[.]com/yackary122-beep/ledger-larp-wallet
+hxxps://github[.]com/evildilldough/ledger-larp-wallet
+hxxps://github[.]com/nardixxx86/ledger-larp-wallet
 ```
 
 ### Host artifacts
