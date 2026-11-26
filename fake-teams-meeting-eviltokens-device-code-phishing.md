@@ -248,21 +248,6 @@ A broader hunting idea: a user visits a non-Microsoft page and then `microsoft.c
 
 ---
 
-## MITRE ATT&CK mapping
-
-| Tactic | Technique | How it appears |
-|---|---|---|
-| Resource Development | T1608.005 Stage Capabilities: Link Target | Phishing page staged on Bunny CDN |
-| Initial Access | T1566.002 Phishing: Spearphishing Link | Shortened link to a fake Teams meeting |
-| Execution | T1204.001 User Execution: Malicious Link | Victim clicks through and follows the instructions |
-| Defense Evasion | T1036 Masquerading | Microsoft and Teams branding, fake "Approved by Microsoft" badge |
-| Defense Evasion | T1027 Obfuscated Files or Information | Page re-rendered from a `blob:` URL, anti-bot token |
-| Credential Access | T1528 Steal Application Access Token | Device code flow yields the victim's OAuth tokens |
-| Defense Evasion / Lateral Movement | T1550.001 Use Alternate Authentication Material: Application Access Token | Stolen tokens used instead of a password, bypassing MFA |
-| Persistence | T1098.005 Account Manipulation: Device Registration | Possible, using the Authentication Broker client |
-
----
-
 ## What to do if you entered the code
 
 **For the user:**
