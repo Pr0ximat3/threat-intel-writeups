@@ -58,7 +58,7 @@ The repository borrows the name of Ledger Live, the desktop app for Ledger hardw
 
 Alongside `Ledger Live.exe` the repository contains decoy files (`LedgersLive.dll`, `Ledgers.pdb`, language folders) to look like a real build. It was created on 2026-01-03 and is **still online as of 2026-11-26**, with 34 stars and 9 forks. All 9 forks also carry `Ledger Live.exe` (a tenth fork has since disappeared), and most were created within days of the original, which suggests the stars and forks may have been planted to make the project look popular. The executable is **unsigned**: Windows shows an *“Unknown Publisher”* warning, and the user has to click **Run**. Network detections fired for *“EXE downloaded from GitHub”* and *“Packed Executable Download”*.
 
-Attackers like GitHub because it is trusted, rarely blocked, and repositories can be recreated in minutes.
+Attackers like GitHub because it is trusted and repositories can be recreated in minutes.
 
 ![The malicious repository immemtary/ledger-larp-wallet hosting a 1.91 MB "Ledger Live.exe"](images/01-github-repo.jpg)
 *Figure 1: The repository `immemtary/ledger-larp-wallet` hosting the 1.91 MB `Ledger Live.exe`, with language folders that make it look like a real build. Source: [ANY.RUN](https://app.any.run/tasks/f733c933-82b9-428b-b4b0-a9231cbe5362/).*
