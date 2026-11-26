@@ -8,7 +8,7 @@ tags: [phishing, device-code, oauth, microsoft-365, entra-id, teams, eviltokens,
 
 **TL;DR:** A link that passes through `cutt[.]ly` and Google's own `share.google` shortener lands on a fake **Microsoft Teams "Sign in to join your meeting"** page hosted on Bunny CDN. The page hands the victim a "verification code" and opens the **real** `microsoft.com/devicelogin` page. When the victim types the code and signs in, they are not joining a meeting. They are approving a sign-in for the attacker's own session, and Microsoft gives the attacker valid tokens for the victim's Microsoft 365 account. No password is typed into a fake site, every Microsoft page involved is genuine, and **MFA does not stop it**, because the victim completes MFA on the attacker's behalf. ANY.RUN attributes the kit to **EvilTokens**.
 
-> ⚠️ **Joining a Teams meeting never requires you to enter a code at `microsoft.com/devicelogin`.** If a meeting link asks you to, close it. If you already did it, go straight to [What to do if you entered the code](#what-to-do-if-you-entered-the-code).
+> ⚠️ **Joining a Teams meeting never requires you to enter a code at `microsoft.com/devicelogin`.** If a meeting link asks you to, close it.
 
 ---
 
@@ -245,31 +245,3 @@ level: medium
 ```
 
 A broader hunting idea: a user visits a non-Microsoft page and then `microsoft.com/devicelogin` within a minute or two. Legitimate device code use almost never starts from a link on a random website.
-
----
-
-## What to do if you entered the code
-
-**For the user:**
-
-1. Tell your IT or security team **immediately**. This is an account takeover, not just a suspicious email.
-2. Don't rely on a password change alone. The attacker holds tokens, not your password.
-
-**For administrators:**
-
-1. **Revoke all sessions** for the user: Entra admin center → Users → *Revoke sessions*, or `Revoke-MgUserSignInSession -UserId <upn>`.
-2. Reset the password and review the user's **MFA methods** for anything newly added.
-3. Check **registered and joined devices** for the user and delete any the user doesn't recognise.
-4. Review **inbox rules**, mail forwarding, sent items and Teams messages for anything the attacker sent, especially internal phishing with the same lure.
-5. Review **sign-in logs** for device code sign-ins and token use from unfamiliar IPs, and block the IOCs above.
-6. Check **enterprise app consents** for the user for anything unexpected.
-
----
-
-## How to stay safe
-
-- **Block the device code flow** for everyone who doesn't need it. In Entra ID, create a Conditional Access policy using *Conditions → Authentication flows → Device code flow* and set it to *Block*, then exclude only the accounts or devices that genuinely need it (for example, conference room systems). This one setting shuts down this whole class of attack.
-- **Teach the rule:** no meeting, document or "verification" ever needs you to type a code into `microsoft.com/devicelogin`, unless you started the sign-in yourself on a TV, a console or a command-line tool *right now*.
-- **Read Microsoft's prompt.** If it says you are signing in to an app on *"another device located in"* a country you're not in, close it.
-- **Be wary of shortened links**, including ones on trusted domains like `share.google`, especially when they arrive with an unexpected meeting invite.
-- **Watch for urgency cues** such as countdown timers, "keep this page open" and "approved by Microsoft" badges. Real Teams meetings don't need any of them.
