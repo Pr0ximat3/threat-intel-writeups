@@ -30,6 +30,13 @@ tags: [malware, infostealer, pentagon, clickfix, crypto, github, threat-intel]
 
 ## Infection chain
 
+
+![Infection chain: fake Ledger Live to the Pentagon stealer](images/fake-ledger-live-pentagon-stealer-chain.svg)
+*Infection chain: the fake Ledger Live.exe installs a hidden Python, fetches the second stage from `marsalek[.]cy` and runs the Pentagon stealer. Hashes for these files are in the IOC tab of the ANY.RUN report.*
+
+<details>
+<summary>Text version of the chain</summary>
+
 ```
 github[.]com/immemtary/ledger-larp-wallet
         │  user downloads "Ledger Live.exe" (≈2 MB, packed, unsigned)
@@ -52,6 +59,8 @@ wscript.exe %TEMP%\r.vbs  →  python %TEMP%\svc.py      ← Pentagon stealer
         ├─ taskkill /F /IM <browser>.exe   (~20 browsers)
         └─ POST https://marsalek.cy/create_log | /log_data | /logging/errors
 ```
+
+</details>
 
 ### 1. Delivery: a "LARP wallet" on GitHub
 The repository borrows the name of Ledger Live, the desktop app for Ledger hardware wallets, but sells something different. Its description is stuffed with the phrase *"ledger live larp wallet … fake ledger balance, transactions"*, repeated over and over to rank in search. It targets people looking for a tool that shows a fake crypto balance, whether to show off or to back up a scam. The README calls it a "Virtual Portfolio Manager", a "risk-free demo environment" in which you "configure your virtual crypto amounts". That lowers the guard of anyone who stops to wonder whether it's safe.

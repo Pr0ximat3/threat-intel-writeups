@@ -30,6 +30,13 @@ tags: [clickfix, arechclient2, sectoprat, rat, stealer, autoit, dll-sideloading,
 
 ## Infection chain
 
+
+![Infection chain with file hashes: ClickFix lure to ArechClient2](images/lambardianviews-clickfix-arechclient2-chain.svg)
+*Infection chain with file hashes. `Pave046.exe` is the legitimate AutoIt3 interpreter (shown in gray); the hash on that step is the malicious `DepartManager.dat` script it runs.*
+
+<details>
+<summary>Text version of the chain</summary>
+
 ```
 lambardianviews[.]com/                      fake Cloudflare "verify you are human" page
   └─ clipboard: powershell … Msxml2.XMLHTTP GET /s … IEX
@@ -48,6 +55,8 @@ lambardianviews[.]com/                      fake Cloudflare "verify you are huma
                  │                   └─ Startup\DepartManager.vbs / .bat     persistence
                  └─ GET /callback.php                      204 — infection callback
 ```
+
+</details>
 
 ---
 

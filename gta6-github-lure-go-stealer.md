@@ -30,6 +30,13 @@ tags: [infostealer, golang, dll-sideloading, github, github-pages, gta6, malware
 
 ## Infection chain
 
+
+![Infection chain with file hashes: GitHub lure to DLL side-loading](images/gta6-github-lure-go-stealer-chain.svg)
+*Infection chain with file hashes. `install.exe` is legitimate PotterDraw (shown in gray) and should not be blocked by hash alone.*
+
+<details>
+<summary>Text version of the chain</summary>
+
 ```
 github.com/GTA-6-CyberLeek-Full-Build/.github        lure page
   └─ hxxps://shanxisaide[.]com/s/file                 redirector
@@ -43,6 +50,8 @@ github.com/GTA-6-CyberLeek-Full-Build/.github        lure page
                              ├─ chrome.exe (×10)
                              └─ RNyZi8Ng5asPa9DPaim9s.exe → Startup folder
 ```
+
+</details>
 
 ### 1. The lure
 

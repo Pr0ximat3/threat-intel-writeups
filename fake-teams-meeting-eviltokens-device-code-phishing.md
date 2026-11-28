@@ -56,6 +56,13 @@ Because the victim really is on `login.microsoftonline.com`, every usual piece o
 
 ## Attack chain
 
+
+![Attack chain: shorteners to the fake Teams page, the EvilTokens backend and the real Microsoft device login](images/fake-teams-meeting-eviltokens-device-code-phishing-chain.svg)
+*Attack chain: two shorteners lead to the fake Teams page, the EvilTokens backend requests a real device code, and the victim enters it at Microsoft's genuine sign-in page. No malware file is involved, so there are no file hashes.*
+
+<details>
+<summary>Text version of the chain</summary>
+
 ```
 hxxps://cutt[.]ly/XyDdxvYU                       (URL shortener)
         │ 301
@@ -77,6 +84,8 @@ hxxps://status.hci-marketingchain[.]net/static-export/api/      (EvilTokens back
         ▼
 hxxps://microsoft.com/devicelogin → login.microsoftonline.com/common/oauth2/deviceauth   (legitimate)
 ```
+
+</details>
 
 ### 1. Delivery: two shorteners, one of them Google
 
