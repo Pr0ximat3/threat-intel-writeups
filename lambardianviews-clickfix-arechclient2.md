@@ -32,7 +32,7 @@ tags: [clickfix, arechclient2, sectoprat, rat, stealer, autoit, dll-sideloading,
 
 
 ![Infection chain with file hashes: ClickFix lure to ArechClient2](images/lambardianviews-clickfix-arechclient2-chain.svg)
-*Infection chain with file hashes. `Pave046.exe` is the legitimate AutoIt3 interpreter (shown in gray); the hash on that step is the malicious `DepartManager.dat` script it runs.*
+*Infection chain with file hashes. `Pave046.exe` is the legitimate AutoIt3 interpreter (shown in gray); don't block it by hash. The malicious logic is the `DepartManager.dat` script it runs, shown as its own step.*
 
 <details>
 <summary>Text version of the chain</summary>

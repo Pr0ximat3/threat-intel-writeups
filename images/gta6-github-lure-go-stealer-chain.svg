@@ -1,55 +1,72 @@
-<svg width="100%" viewBox="0 0 700 820" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
-<title>Fake GTA 6 Full Build DLL side-loading infection chain</title><desc>A GitHub lure redirects through GitHub Pages to a ZIP; a renamed legitimate PotterDraw side-loads a malicious d3dx9_26.dll (a possible Go infostealer) that steals browser data, persists from Startup and exfiltrates to its C2.</desc>
+<svg width="100%" viewBox="0 0 760 1162" role="img" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title>Fake GTA 6 Full Build DLL side-loading infection chain</title><desc>A GitHub lure redirects through shanxisaide.com and a GitHub Pages page to sh-mylike.com; the ZIP holds a renamed legitimate PotterDraw that side-loads a malicious d3dx9_26.dll, which copies browser data, launches Chrome, persists from Startup and uploads to two C2 domains.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect x="0" y="0" width="700" height="820" rx="16" fill="#FBFAF7"/>
-<line x1="350" y1="76" x2="350" y2="94" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="350" y1="152" x2="350" y2="170" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="350" y1="228" x2="350" y2="246" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="350" y1="304" x2="350" y2="322" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="350" y1="398" x2="350" y2="416" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="350" y1="492" x2="350" y2="510" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="350" y1="568" x2="350" y2="586" stroke="#534AB7" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
-<line x1="350" y1="662" x2="350" y2="680" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
-<rect x="70" y="20" width="560" height="54" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.75"/>
-<text x="350" y="41" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#0C447C">Fake “GTA 6 Full Build” org</text>
-<text x="350" y="58" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#185FA5">github.com/GTA-6-CyberLeek-Full-Build (.github README)</text>
-<rect x="70" y="96" width="560" height="54" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
-<text x="350" y="117" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">Redirector</text>
-<text x="350" y="134" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">shanxisaide.com/s/file</text>
-<rect x="70" y="172" width="560" height="54" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
-<text x="350" y="193" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">GitHub Pages redirect</text>
-<text x="350" y="210" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">yiwvywwuxkaz.github.io/warrior/ (Base64 target)</text>
-<rect x="70" y="248" width="560" height="54" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.75"/>
-<text x="350" y="269" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#712B13">Download</text>
-<text x="350" y="286" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">sh-mylike.com/kl/Warrior-Pearl → app-V521GGC0.zip</text>
-<rect x="70" y="324" width="560" height="72" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.75"/>
-<text x="350" y="344" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">install.exe = legitimate PotterDraw</text>
-<text x="350" y="361" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">renamed loader; side-loads the DLL (clean, 0/68)</text>
-<text x="350" y="379" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5F5E5A">SHA-256 496d1c75257ec33af07d2095084736d71837f5191615ca6b166ca12097e30863</text>
-<rect x="70" y="418" width="560" height="72" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.75"/>
-<text x="350" y="438" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#791F1F">d3dx9_26.dll (side-loaded)</text>
-<text x="350" y="455" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#A32D2D">possible Go infostealer — 38/67 on VirusTotal</text>
-<text x="350" y="473" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#A32D2D">SHA-256 a9011124354bae6560dfeedd67d661fd1f8aef82ba46c8140e8589b0eb6cb367</text>
-<rect x="70" y="512" width="560" height="54" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.75"/>
-<text x="350" y="533" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#791F1F">Browser data theft</text>
-<text x="350" y="550" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#A32D2D">copies cookies, autofill and history; launches chrome.exe</text>
-<rect x="70" y="588" width="560" height="72" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.75"/>
-<text x="350" y="608" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">Persistence</text>
-<text x="350" y="625" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">dropped exe runs from the Startup folder</text>
-<text x="350" y="643" text-anchor="middle" dominant-baseline="central" font-size="10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#534AB7">MD5 7107adefdc607e8e3a6dfe7102d0e07f (RNyZi8Ng5asPa9DPaim9s.exe)</text>
-<rect x="70" y="682" width="560" height="54" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.75"/>
-<text x="350" y="703" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#791F1F">C2 exfiltration</text>
-<text x="350" y="720" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#A32D2D">vibhe0.tattoo, buggergame.onl (behind Cloudflare)</text>
-<circle cx="70" cy="770" r="5" fill="#185FA5"/>
-<text x="80" y="770" dominant-baseline="central" font-size="12" fill="#444441">Lure</text>
-<circle cx="138" cy="770" r="5" fill="#0F6E56"/>
-<text x="148" y="770" dominant-baseline="central" font-size="12" fill="#444441">Redirect</text>
-<circle cx="234" cy="770" r="5" fill="#993C1D"/>
-<text x="244" y="770" dominant-baseline="central" font-size="12" fill="#444441">Delivery</text>
-<circle cx="330" cy="770" r="5" fill="#5F5E5A"/>
-<text x="340" y="770" dominant-baseline="central" font-size="12" fill="#444441">Legitimate (abused)</text>
-<circle cx="503" cy="770" r="5" fill="#A32D2D"/>
-<text x="513" y="770" dominant-baseline="central" font-size="12" fill="#444441">Payload / C2</text>
-<circle cx="70" cy="794" r="5" fill="#534AB7"/>
-<text x="80" y="794" dominant-baseline="central" font-size="12" fill="#444441">Persistence</text>
+<rect x="0" y="0" width="760" height="1162" rx="16" fill="#FBFAF7"/>
+<line x1="380" y1="99" x2="380" y2="119" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="181" x2="380" y2="201" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="298" x2="380" y2="318" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="399" x2="380" y2="419" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="532" x2="380" y2="552" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="633" x2="380" y2="653" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="734" x2="380" y2="754" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="380" y1="867" x2="380" y2="887" stroke="#534AB7" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+<line x1="380" y1="987" x2="380" y2="1007" stroke="#73726c" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="50" y="20" width="660" height="77" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.75"/>
+<text x="72" y="42" dominant-baseline="central" font-size="14" font-weight="500" fill="#0C447C">Fake “GTA 6 Full Build” org on GitHub</text>
+<text x="72" y="60" dominant-baseline="central" font-size="12" fill="#185FA5">github.com/GTA-6-CyberLeek-Full-Build/.github  (lure page)</text>
+<text x="76" y="79" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#0C447C"><tspan fill="#185FA5">├─ </tspan>profile README: “209 GB” build, DOWNLOAD INSTALL.EXE badge</text>
+<rect x="50" y="121" width="660" height="58" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+<text x="72" y="143" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">Redirector</text>
+<text x="72" y="161" dominant-baseline="central" font-size="12" fill="#0F6E56">https://shanxisaide.com/s/file</text>
+<rect x="50" y="203" width="660" height="93" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+<text x="72" y="225" dominant-baseline="central" font-size="14" font-weight="500" fill="#04342C">GitHub Pages “Package Setup” page</text>
+<text x="72" y="243" dominant-baseline="central" font-size="12" fill="#0F6E56">https://yiwvywwuxkaz.github.io/warrior/</text>
+<text x="76" y="262" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#04342C"><tspan fill="#0F6E56">├─ </tspan>destination hidden in Base64, sent on with window.location.replace()</text>
+<text x="76" y="278" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#04342C"><tspan fill="#0F6E56">├─ </tspan>identical copy at yiwvywwuxkaz.github.io/huang/</text>
+<rect x="50" y="320" width="660" height="77" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.75"/>
+<text x="72" y="342" dominant-baseline="central" font-size="14" font-weight="500" fill="#712B13">Download</text>
+<text x="72" y="360" dominant-baseline="central" font-size="12" fill="#993C1D">https://sh-mylike.com/kl/Warrior-Pearl</text>
+<text x="76" y="379" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#712B13"><tspan fill="#993C1D">├─ </tspan>app-V521GGC0.zip saved to Downloads</text>
+<rect x="50" y="421" width="660" height="109" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.75"/>
+<text x="72" y="443" dominant-baseline="central" font-size="14" font-weight="500" fill="#712B13">Archive opened in WinRAR (138 MB unpacked)</text>
+<text x="72" y="461" dominant-baseline="central" font-size="12" fill="#993C1D">extracted to %TEMP%\Rar$EXa6672.26880\</text>
+<text x="76" y="480" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#712B13"><tspan fill="#993C1D">├─ </tspan>install.exe        5.35 MB</text>
+<text x="76" y="496" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#712B13"><tspan fill="#993C1D">├─ </tspan>d3dx9_26.dll       8.05 MB</text>
+<text x="76" y="512" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#712B13"><tspan fill="#993C1D">├─ </tspan>data.bin           ~125 MB padding</text>
+<rect x="50" y="554" width="660" height="77" rx="10" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.75"/>
+<text x="72" y="576" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">install.exe = legitimate PotterDraw 1.0.8.0 (0/68)</text>
+<text x="72" y="594" dominant-baseline="central" font-size="12" fill="#5F5E5A">run from WinRAR’s temp folder (started twice); loads the DLL beside it</text>
+<text x="72" y="613" dominant-baseline="central" font-size="10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5F5E5A">SHA-256 496d1c75257ec33af07d2095084736d71837f5191615ca6b166ca12097e30863</text>
+<rect x="50" y="655" width="660" height="77" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.75"/>
+<text x="72" y="677" dominant-baseline="central" font-size="14" font-weight="500" fill="#791F1F">d3dx9_26.dll side-loaded</text>
+<text x="72" y="695" dominant-baseline="central" font-size="12" fill="#A32D2D">possible Go infostealer — 38/67 on VirusTotal, no family named</text>
+<text x="72" y="714" dominant-baseline="central" font-size="10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#A32D2D">SHA-256 a9011124354bae6560dfeedd67d661fd1f8aef82ba46c8140e8589b0eb6cb367</text>
+<rect x="50" y="756" width="660" height="109" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.75"/>
+<text x="72" y="778" dominant-baseline="central" font-size="14" font-weight="500" fill="#791F1F">Browser data theft</text>
+<text x="72" y="796" dominant-baseline="central" font-size="12" fill="#A32D2D">inside the install.exe process</text>
+<text x="76" y="815" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#791F1F"><tspan fill="#A32D2D">├─ </tspan>copies Edge History, Web Data (autofill) and Network\Cookies</text>
+<text x="76" y="831" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#791F1F"><tspan fill="#A32D2D">├─ </tspan>launches chrome.exe (×10)</text>
+<text x="76" y="847" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#791F1F"><tspan fill="#A32D2D">├─ </tspan>lists installed software from the registry</text>
+<rect x="50" y="889" width="660" height="96" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.75"/>
+<text x="72" y="911" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">Persistence</text>
+<text x="72" y="929" dominant-baseline="central" font-size="12" fill="#534AB7">RNyZi8Ng5asPa9DPaim9s.exe (953 KB) written to %TEMP%, run from Startup</text>
+<text x="76" y="948" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#3C3489"><tspan fill="#534AB7">├─ </tspan>second executable: aeygaRFR0yePLcqVmTmLmTess3NcDR.exe</text>
+<text x="72" y="967" dominant-baseline="central" font-size="10" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#534AB7">MD5 7107adefdc607e8e3a6dfe7102d0e07f  (RNyZi8Ng5asPa9DPaim9s.exe)</text>
+<rect x="50" y="1009" width="660" height="93" rx="10" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.75"/>
+<text x="72" y="1031" dominant-baseline="central" font-size="14" font-weight="500" fill="#791F1F">Exfiltration over HTTPS</text>
+<text x="72" y="1049" dominant-baseline="central" font-size="12" fill="#A32D2D">both domains behind Cloudflare</text>
+<text x="76" y="1068" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#791F1F"><tspan fill="#A32D2D">├─ </tspan>vibhe0.tattoo      172.67.140.245   656 KB sent</text>
+<text x="76" y="1084" dominant-baseline="central" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#791F1F"><tspan fill="#A32D2D">├─ </tspan>buggergame.onl     172.67.177.239     4 KB sent</text>
+<circle cx="55" cy="1136" r="5" fill="#185FA5"/>
+<text x="65" y="1136" dominant-baseline="central" font-size="12" fill="#444441">Lure</text>
+<circle cx="123" cy="1136" r="5" fill="#0F6E56"/>
+<text x="133" y="1136" dominant-baseline="central" font-size="12" fill="#444441">Redirect</text>
+<circle cx="219" cy="1136" r="5" fill="#993C1D"/>
+<text x="229" y="1136" dominant-baseline="central" font-size="12" fill="#444441">Delivery</text>
+<circle cx="315" cy="1136" r="5" fill="#5F5E5A"/>
+<text x="325" y="1136" dominant-baseline="central" font-size="12" fill="#444441">Legitimate (abused)</text>
+<circle cx="488" cy="1136" r="5" fill="#A32D2D"/>
+<text x="498" y="1136" dominant-baseline="central" font-size="12" fill="#444441">Payload / C2</text>
+<circle cx="612" cy="1136" r="5" fill="#534AB7"/>
+<text x="622" y="1136" dominant-baseline="central" font-size="12" fill="#444441">Persistence</text>
 </svg>
